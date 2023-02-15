@@ -1,0 +1,170 @@
+assigment 14
+
+1.
+	public static void main(String args[]) {
+		testTryCatch() ;
+	}
+	
+	static void testTryCatch() {
+		try {
+			System.out.println("This code is running in the try block") ;
+			int i = 10/0 ;
+		}
+		catch(Exception e) {
+			System.out.println("e is the object of class Exception and tostring method is applied to it."
+					+ "It will print the error occuring") ;
+			System.out.println(e) ;
+			
+		}
+	}
+
+
+
+2.
+	static void multipleCatch() {
+		Scanner sc = new Scanner(System.in) ;
+		try {
+			int num = 10 ;
+			int[] arr = new int[num] ;
+			System.out.println("Enter a number") ;
+			int n = sc.nextInt() ;
+			System.out.println(arr[n]/n) ;
+			
+			String[] str = {"", null} ;
+			if(n%2 == 0) {
+				System.out.println(str[0].length()) ;
+			}
+			else {
+				System.out.println(str[1].length()) ;
+			}
+			
+		}
+		catch(ArithmeticException e) {
+			System.out.println("You entered 0 hence 0/0 value led to error") ;
+			System.out.println(e) ;
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("You entered value greater than 9 hence unreachable index") ;
+			System.out.println(e) ;
+			
+		}
+		catch(NullPointerException e) {
+			System.out.println("You entered odd number hence you get exception") ;
+			System.out.println(e) ;
+		}
+	}
+
+
+
+3.
+
+public class Que3 {
+	
+	public static void main(String[] args) {
+		System.out.println("hello print") ;
+		uncheckedThrow() ;
+		System.out.println("The exception is allowed to be thrown as program is compiled and still running") ;
+		checkedThrow() ;
+		System.out.println("This line will not run as the program doesnt allows this exception to be thrown") ;
+	}
+	
+	
+	public static void checkedThrow() {
+		throw new Error("Checked exception occured") ;
+	}
+	
+	public static void uncheckedThrow() {
+		throw new RuntimeException("Unchecked exception occured") ;
+	}
+	
+}
+
+
+
+4.	
+	static void rethrowingException() {
+		try {
+			int i = 0/0 ;
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e) ;
+			try {
+				int i = 0/0 ;
+			}
+			catch(ArithmeticException e2) {
+				System.out.println(e2) ; 
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+5.
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in) ;
+		System.out.println("Enter the numbers") ;
+		try {
+		int x = sc.nextInt() ;
+		int y = sc.nextInt() ;
+		System.out.println(x/y) ;
+		
+		}
+		catch(ArithmeticException e) {
+			System.out.println(e) ;
+		}
+		catch (Exception e) {
+			System.out.println(e) ;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
