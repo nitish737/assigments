@@ -1,0 +1,204 @@
+assigment 17
+
+
+
+
+1.
+	static void que1() {
+		ArrayList<Integer> arrLi = new ArrayList() ;
+		arrLi.add(10) ;
+		System.out.println(arrLi);
+	}
+
+
+
+2
+	static void que2(int index, int newVal) {
+		ArrayList<Integer> arrLi = new ArrayList() ;
+		arrLi.add(10) ;
+		arrLi.add(20) ;
+		arrLi.add(30) ;
+		arrLi.add(40) ;
+		arrLi.add(50) ;
+		arrLi.add(60) ;
+		arrLi.add(70) ;
+		arrLi.add(80) ;
+		arrLi.add(90) ;
+		
+		arrLi.set(index, newVal) ;
+		System.out.println(arrLi.toString());
+	}
+
+
+3.
+	static void que3() {
+		ArrayList<Integer> arrLi = new ArrayList() ;
+		arrLi.add(90) ;
+		arrLi.add(80) ;
+		arrLi.add(70) ;
+		arrLi.add(60) ;
+		arrLi.add(50) ;
+		arrLi.add(40) ;
+		arrLi.add(30) ;
+		arrLi.add(20) ;
+		arrLi.add(10) ;
+		int temp , min ;
+		System.out.println(arrLi);
+		for(int i = 0 ; i < arrLi.size() - 1 ; i++) {
+			min = arrLi.get(i) ;
+			for(int j = i + 1 ; j < arrLi.size() ; j++) {
+				if(arrLi.get(j) < min) {
+					temp = arrLi.get(j) ;
+					arrLi.set(j, arrLi.get(i)) ;
+					arrLi.set(i, temp) ;
+				}
+			}
+		}
+		System.out.println(arrLi);
+	}
+
+
+
+
+
+
+
+
+
+4.
+	static void que4(int key) {
+		TreeMap <Integer, String> tm = new TreeMap() ;
+		int tryKey = key ;
+		tm.put(1, "value1") ;
+		tm.put(2, "value2") ;
+		tm.put(3, "value3") ;
+		tm.put(4, "value4") ;
+		tm.put(5, "value5") ;
+		tm.put(7, "value6") ;
+		tm.put(6, "value7") ;
+		tm.put(8, "value8") ;
+		tm.put(9, "value9") ;
+		
+		
+		System.out.println(tm.keySet());
+		System.out.println(tm.ceilingKey(key)) ;
+		
+	}
+	
+
+
+
+
+5.
+	static void que5(int index, int value) {
+		
+		LinkedList<Integer> li = new LinkedList() ;
+		
+		li.add(10) ;
+		li.add(20) ;
+		li.add(30) ;
+		li.add(40) ;
+		li.add(50) ;
+		
+		System.out.println(li) ;
+		li.add(index, value);
+		System.out.println(li);
+		
+		
+	}
+
+
+
+
+6.
+
+	static void que6(int key) {
+		TreeMap <Integer, String> tm = new TreeMap() ;
+		tm.put(1, "value1") ;
+		tm.put(2, "value2") ;
+		tm.put(3, "value3") ;
+		tm.put(4, "value4") ;
+		tm.put(5, "value5") ;
+		tm.put(7, "value6") ;
+		tm.put(6, "value7") ;
+		tm.put(8, "value8") ;
+		tm.put(9, "value9") ;
+		
+		System.out.println(tm.ceilingKey(key)) ;
+		try {
+		System.out.println(tm.get(tm.ceilingKey(key)));
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+
+
+
+7
+	static void que7(int key) {
+		TreeMap <Integer, String> tm = new TreeMap() ;
+		tm.put(1, "value1") ;
+		tm.put(2, "value2") ;
+		tm.put(3, "value3") ;
+		tm.put(4, "value4") ;
+		tm.put(5, "value5") ;
+		tm.put(7, "value6") ;
+		tm.put(6, "value7") ;
+		tm.put(8, "value8") ;
+		tm.put(9, "value9") ;
+		
+		if(tm.containsKey(key)) {
+			System.out.println("Key exists");
+		}
+		else {
+			System.out.println("Key doesn't exists");
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
